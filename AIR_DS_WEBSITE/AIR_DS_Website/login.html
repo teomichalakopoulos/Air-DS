@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+    <title>Σύνδεση / Εγγραφή</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body>
+    <!--Header-->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">Air DS</a>
+            <button class="burger" id="burger-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="navbar-menu" id="navbar-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mytrips.html">My Trips</a></li>
+                <li>
+                    <a href="login.html" id="login-logout-link">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="menu-overlay" id="menu-overlay"></div>
+    <!--Linear Styling for backgroundimages-->
+    <div class="background-wrapper" style="background:
+    linear-gradient(to bottom, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 40%),
+    url('images/myimage4.jpg') no-repeat center top fixed;
+    background-size: cover;">
+    <img src="images/myimage4.jpg" alt="Περιγραφή της εικόνας" class="visually-hidden">
+        <div class="container">
+            <!-- Login Form -->
+            <div id="login-form">
+                <h2>Σύνδεση</h2>
+                <div class="error" id="login-error"></div>
+                <div class="form-group">
+                    <label for="login-username">Όνομα χρήστη</label>
+                    <input type="text" id="login-username" autocomplete="username">
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Κωδικός Πρόσβασης</label>
+                    <input type="password" id="login-password" autocomplete="current-password">
+                </div>
+                <button onclick="login()">Σύνδεση</button>
+                <span class="toggle-link" onclick="showRegister()">Δεν έχετε λογαριασμό; Εγγραφή</span>
+            </div>
+
+            <!-- Registration Form -->
+            <div id="register-form" style="display:none;">
+                <h2>Εγγραφή</h2>
+                <div class="error" id="register-error"></div>
+                <div class="form-group">
+                    <label for="reg-name">Όνομα</label>
+                    <input type="text" id="reg-name">
+                </div>
+                <div class="form-group">
+                    <label for="reg-surname">Επώνυμο</label>
+                    <input type="text" id="reg-surname">
+                </div>
+                <div class="form-group">
+                    <label for="reg-username">Όνομα χρήστη</label>
+                    <input type="text" id="reg-username">
+                </div>
+                <div class="form-group">
+                    <label for="reg-password">Κωδικός Πρόσβασης</label>
+                    <input type="password" id="reg-password">
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">E-mail</label>
+                    <input type="email" id="reg-email">
+                </div>
+                <button onclick="register()">Εγγραφή</button>
+                <span class="toggle-link" onclick="showLogin()">Έχετε ήδη λογαριασμό; Σύνδεση</span> 
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- Footer Section -->
+<footer>
+    <div id="footerGrid">
+        <!-- Contact Info -->
+        <div>
+            <h3>Επικοινωνία</h3>
+            <p>
+                Τηλέφωνο: <a href="tel:+302104142000">+30 210 4142000</a><br>
+                Email: <a href="mailto:info@airds.gr">info@airds.gr</a><br>
+                Διεύθυνση: Αεροδρόμιο Ελευθέριος Βενιζέλος, Σπάτα 190 04, Ελλάδα
+            </p>
+        </div>
+        <!-- Google Maps Embed -->
+        <div>
+            <h3>Τοποθεσία Hub</h3>
+            <iframe
+                title="Ελευθέριος Βενιζέλος"
+                src="https://www.google.com/maps?q=Athens+International+Airport+Eleftherios+Venizelos&hl=el&z=15&output=embed"
+                width="100%" height="200"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2024 AirDS. All rights reserved.
+    </div>
+</footer>
+</html>
