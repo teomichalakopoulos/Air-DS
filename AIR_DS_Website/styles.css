@@ -1,0 +1,480 @@
+/* Navigation bar styles */
+.navbar {
+    width: 100%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, #005494 0%, #00a0cc 100%);
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    position: relative;
+    z-index: 1002;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    width: 100%;
+    max-width: 97.5%;
+    margin: 0 auto;
+}
+
+.navbar-logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-wrap: nowrap;
+}
+
+.navbar-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+.navbar-menu li a:hover {
+    color: #90caf9;
+}
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.35em;
+    font-weight: bold;
+    background: #0078d4; 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 2px 8px rgba(0,120,212,0.10);
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+    animation: bookingDescFadeIn 1s ease;
+}
+
+.container {
+    max-width: 800px;      
+    width: 90vw;           /* Responsive: takes up 90% of viewport width */
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.97); 
+    padding: 32px 32px 24px 32px;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+label {
+    display: block;
+    margin-top: 16px;
+}
+
+select,
+input[type="date"],
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button {
+    margin-top: 24px;
+    width: 100%;
+    padding: 10px;
+    background: #0078d4;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background: #0056b3;
+}
+
+.background-wrapper {
+    position: relative;
+    min-height: 60vh;
+    width: 100%;
+    background: #e3f2fd; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.background-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2); 
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+.background-wrapper > .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Login/Register page styles */
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.error {
+    color: #d00;
+    margin-bottom: 10px;
+}
+
+.toggle-link {
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Alt style for visually hidden images*/
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+/* Footer styles */
+footer {
+    background: #222;
+    color: #fff;
+    margin-top: 0px;
+    padding: 32px 0 0 0;
+}
+
+#footerGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+footer h3 {
+    margin-top: 0;
+    color: #fff;
+}
+
+footer a {
+    color: #90caf9;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+footer iframe {
+    border: 0;
+    border-radius: 8px;
+}
+
+.footer-bottom {
+    text-align: center;
+    color: #bbb;
+    font-size: 14px;
+    margin-top: 24px;
+    padding-bottom: 16px;
+}
+
+/* Burger button styles */
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+    margin-top: 0;
+}
+.burger span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    margin: 4px 0;
+    background: #fff;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.4); 
+    z-index: 999; /* !!just below the menu!! */
+    transition: opacity 0.2s;
+    }
+    .menu-overlay.active {
+    display: block;
+    }
+
+/* Seat map styles */
+.seat-row-number {
+    font-weight: bold;
+    background: #f0f0f0;
+    min-width: 32px;
+    text-align: center;
+    border: none;
+}
+
+
+.seat-map-centered {
+    margin: 0 auto;
+    display: block;
+}
+
+.seat-map-table {
+    font-size: 12px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    border-collapse: collapse;
+    table-layout: fixed; 
+    border-radius: 8px;      
+    overflow: hidden;
+}
+
+.seat-btn {
+    background: #f3f4f6;
+    border: 1px solid #888;
+    color: #222;
+    transition: background 0.2s;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+.seat-btn.selected {
+    background: #0078d4 !important;
+    color: #fff;
+}
+.seat-btn:disabled {
+    background: #d32f2f !important;
+    color: #fff;
+    cursor: not-allowed;
+}
+
+.seat-row-number {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    font-size: 12px;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 36px;
+    background: #f0f0f0;
+    border: none;
+    box-sizing: border-box;
+}
+
+#seat-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+    padding: 0;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#seat-section.active {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 32px 16px 32px 16px;
+    margin-bottom: 50px;
+}
+
+.seat-map-table th, .seat-map-table td {
+    border: 1px solid #fff;
+    padding: 0;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Styles for MyTrips */
+
+.mytrips-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+}
+.mytrips-table th, .mytrips-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+.mytrips-table th {
+    background: #f3f4f6;
+}
+.cancel-btn[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.table-scroll {
+    width: 100%;
+    overflow-x: auto;
+}
+.seat-map-table {
+    min-width: 1200px; 
+    border-collapse: collapse;
+}
+
+@media (max-width: 1500px) {
+    #seat-section {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        max-width: 100vw !important;
+        width: 100vw !important;
+        box-sizing: border-box;
+    }
+    .table-scroll {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100vw !important;
+        max-width: 100vw !important;
+    }
+}
+
+/* Responsive: Show burger, hide menu */
+@media (max-width: 600px), (orientation: portrait) {
+    html {
+    font-size: 125%; 
+    }
+    
+    .container {
+        max-width: 98vw; /* Let the form take more width */
+        padding: 8vw 2vw;
+    }
+
+    .burger {
+        display: flex; /* Show burger button */
+    }
+
+    .navbar-container {
+        position: relative;
+        width: 100vw;     
+        max-width: 95vw;       
+        padding: 0px 10px 0px;        
+    }
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        background: #00a0cc;
+        top: 100%;
+        left: 0;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%); /*!! This shifts the menu to align with the viewport, i found it via chatgpt. */ 
+        z-index: 1000;
+        text-align: center;
+        padding-bottom: 12px; 
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-menu li a {
+        font-size: 1.25em;         
+        font-weight: bold;           
+        color: #fff;                 
+        background: rgba(0, 120, 212, 0.15); 
+        padding: 16px 10px;        
+        border-radius: 6px;
+        margin: 4px 0;
+        display: block;
+        transition: background 0.2s, color 0.2s;
+    }
+
+    .navbar-menu li a:hover {
+        background: rgba(0, 120, 212, 0.35);
+        color: #90caf9;
+    }
+
+    #footerGrid {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 0 8px;
+    }
+}
